@@ -33,8 +33,8 @@ unavesmensaje();
 
 firebase.database().ref().child("taxis").child(String(vndhijo)).child("usuario").on('value', function(snapshot) {
   //updateStarCount(postElement, snapshot.val());
-document.getElementById("demo").innerHTML = vnodelatuser+" lauylnu "+  vnodelnguser+""+vnodelat+" "+vnodelng+" "+vndpadre+" h "+vndhijo+
-  " nn " + vstxnode+" --*** "+snapshot.val();
+/*document.getElementById("demo").innerHTML = vnodelatuser+" lauylnu "+  vnodelnguser+""+vnodelat+" "+vnodelng+" "+vndpadre+" h "+vndhijo+
+  " nn " + vstxnode+" --*** "+snapshot.val();*/
   //alert(snapshot.val());
 });
 
@@ -111,7 +111,7 @@ console.log("s "+ arrnode2[i]);
 function  arrayidall(){
 var i;
 for (i = 0; i < arrnode2.length; i++) { 
-console.log( "arrnode2 " + arrnode2[i].idfirebase);
+//console.log( "arrnode2 " + arrnode2[i].idfirebase);
 
 
 }
@@ -144,7 +144,7 @@ var idx=0;
 
 
 function myFunction2(){
- console.log("cel "+general["uno"].cedula);
+ //console.log("cel "+general["uno"].cedula);
 //validadcionuser("311","1112");
 //console.log("fffffffff "+general["taxis"]["uno"].lat);
 //showAndroidToast(22);
@@ -153,7 +153,7 @@ function myFunction2(){
 function llamarandroid(){
 
     // vreturn=  window.Android.showToast(id,st1,st2);
- document.getElementById("demo").innerHTML = vreturn;
+ //document.getElementById("demo").innerHTML = vreturn;
 }
 
 
@@ -227,9 +227,9 @@ function udatemap(){
 
 latm=parseFloat(vnodelat); 
 lngm=parseFloat(vnodelng);
-document.getElementById("demo").innerHTML = vnodelatuser+
+/*document.getElementById("demo").innerHTML = vnodelatuser+
 " lauylnu ok  "+  vnodelnguser+""+vnodelat+" "+vnodelng+
-" "+vndpadre+" "+vndhijo+"  "+"nodess andr " +" "+vstxnode;
+" "+vndpadre+" "+vndhijo+"  "+"nodess andr " +" "+vstxnode;*/
 
 
    initMap1(parseFloat(vnodelat),parseFloat(vnodelng));
@@ -473,10 +473,10 @@ var veven;
 
 latus=event.latLng.lat();
 lngus=event.latLng.lng();
-console.log("new " +latus+" la ln "+lngus);
+//console.log("new " +latus+" la ln "+lngus);
 sfinirapnode("taxis",vstxnode,"latuser",latus);
 sfinirapnode("taxis",vstxnode,"lnguser",lngus);
- document.getElementById("demo").innerHTML="new "+vstxnode;
+// document.getElementById("demo").innerHTML="new "+vstxnode;
 
          // finirapnode(tx,nh,n)
 
@@ -657,9 +657,9 @@ udatemap();
 //setTimeout(wazeinicia, 3000);
 function wazeinicia(){
 
-document.getElementById("demo").innerHTML = vnodelatuser+
+/*document.getElementById("demo").innerHTML = vnodelatuser+
 " lauylnu "+  vnodelnguser+""+vnodelat+" "+vnodelng+
-" "+vndpadre+" "+vndhijo+"  "+"w" +" "+vstxnode;
+" "+vndpadre+" "+vndhijo+"  "+"w" +" "+vstxnode;*/
 showAndroidToast("wazeinciia","","","");
 }
 function btaccionuser(){
