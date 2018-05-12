@@ -1,0 +1,196 @@
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        -webkit-box-shadow: 3px 26px 76px 3px #000000; 
+box-shadow: 3px 26px 76px 3px #000000;
+        height: 100%;
+        width: 100%;
+         border-radius: 25%;
+       }
+
+
+       #demo {
+-webkit-box-shadow: 3px 26px 76px 3px #000000; 
+box-shadow: 3px 26px 76px 3px #000000;
+}
+      
+          #idmodal {
+font:bold 24px Arial, Monaco, monospace;
+font-style:normal;
+color:#ffb700;
+background:#40444a;
+border:6px inset #cccccc;
+text-shadow:-4px -1px 2px #222222;
+box-shadow:1px 1px 9px #000000;
+-moz-box-shadow:1px 1px 9px #000000;
+-webkit-box-shadow:1px 1px 9px #000000;
+border-radius:83px 0px 90px 40px;
+-moz-border-radius:83px 0px 90px 40px;
+-webkit-border-radius:83px 0px 90px 40px;
+width:75%;
+padding:20px 43px;
+cursor:pointer;
+margin:0 auto;
+
+}
+      
+      
+  
+.clbt{
+  font:bold 18px "Arial Black", Gadget, sans-serif;
+font-style:normal;
+color:#ffd324;
+background:#0c0f36;
+border:0px outset #4a3a00;
+text-shadow:0px -1px 8px #0d0d0d;
+box-shadow:-2px 0px 12px #2e2300;
+-moz-box-shadow:-2px 0px 12px #2e2300;
+-webkit-box-shadow:-2px 0px 12px #2e2300;
+border-radius:15px 15px 15px 15px;
+-moz-border-radius:15px 15px 15px 15px;
+-webkit-border-radius:15px 15px 15px 15px;
+width:14px;
+padding:20px 46px;
+cursor:pointer;
+margin:0 auto;
+text-align:center;
+}    
+      
+      
+      
+      
+      
+      
+      
+    </style>
+
+         <script src='jquery-3.3.1.min.js'></script>
+ 
+  </head>
+  <body>
+    <h3>mi taxi</h3>
+    <div id="map"></div>
+    <script>
+  
+    </script>
+
+<div style="background-color:lightblue">
+ 
+
+     <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+
+        </script>
+
+    <script>
+ var w = window.innerWidth;
+var h = window.innerHeight; 
+var vwaze="";
+var vnodelat="";
+var vnodelng="";
+var vnodelnguser="";
+var vnodelatuser="";
+
+4.626202, -74.138013
+
+var vreturn="";
+var vid="";
+var vndpadre="";
+var vndhijo="";
+
+var vgetrelojscript="";
+
+
+
+var latm;
+var lngm;
+var latus;
+var lngus;
+var vstxnode="";
+
+function StF(ss){
+ return parseFloat(ss);
+}
+function pp(){
+//player  4.628456, -74.137556
+// user 4.631045, -74.135337
+latm=StF("4.628456");
+ lngm=StF("-74.137556");
+latus=StF("4.631045");
+ lngus=StF("-74.135337");
+ alert(latm*latus);
+}
+pp();
+ //texto(this.getPosition()+" "+this.title+" a "+this.activom);
+
+
+  function showAndroidToast(st1,st2,st3,st4) {
+
+    vid=st1;
+    vndpadre=st2;
+    vndhijo=st3;
+      // vreturn=  window.Android.showToast(vid,vndpadre,vndhijo);
+ document.getElementById("demo").innerHTML = vreturn;
+ if(vid=="coorde"&& true){
+  alert("con window");
+  vstxnodes=window.Android.showToast("txtnodes",vndpadre,vndhijo);
+vnodelat=window.Android.showToast("latm",vndpadre,vndhijo);
+vnodelng=window.Android.showToast("lngm",vndpadre,vndhijo);
+vnodelnguser=window.Android.showToast("lngus",vndpadre,vndhijo);
+vnodelatuser=window.Android.showToast("latus",vndpadre,vndhijo);
+vndpadre=window.Android.showToast("nodep",vndpadre,vndhijo);
+vndhijo=window.Android.showToast("nodeh",vndpadre,vndhijo);
+vwaze=window.Android.showToast("waze",vndpadre,vndhijo);
+vstxnode=window.Android.showToast("btaccionuser",vndpadre,vndhijo);
+
+
+
+//document.getElementById("demo").innerHTML = vnodelatuser+" lauylnu "+  vnodelnguser+""vnodelat+""vnodelng;
+document.getElementById("demo").innerHTML = vnodelatuser+" lauylnu "+  vnodelnguser+""+vnodelat+" "+vnodelng+" "+vndpadre+" h "+vndhijo+
+  " nn " + vstxnode+" -- "+vstxnode;
+}
+if(vid=="gpsllamar"){
+window.Android.showToast("gpsllamar",vndpadre,vndhijo);}
+if(vid=="wazeinciia"){
+  document.getElementById("demo").innerHTML ="ok waze";
+window.Android.showToast("wazeinciia",vndpadre,vndhijo);}
+if(vid=="getrelojscript"){
+vgetrelojscript=window.Android.showToast("getrelojscript",vndpadre,vndhijo);
+}
+if(vid=="getrelojscript"){
+vstxnode=window.Android.showToast("btaccionuser",vndpadre,vndhijo);
+vndhijo=vstxnode;
+}
+
+
+
+
+  
+    }
+//document.getElementById("demo").innerHTML = "okkkkkkkkkkk";
+showAndroidToast("coorde","","","");
+if(vstxnode==""){
+ vstxnode=showAndroidToast("btaccionuser","","","");
+   document.getElementById("demo").innerHTML=vstxnode;
+}
+//showAndroidToast("wazeinciia","","","");
+    </script>
+
+ <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCV4ya46Yoag-iGeJb5SUwZ2q1Irx0UjnU&callback=initMap">
+
+    </script>  <script  src="login.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
