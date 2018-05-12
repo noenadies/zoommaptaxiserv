@@ -27,6 +27,7 @@ var vcaambfire="";
 
 var general;
 
+vnodelat=4.6789;
 
 
 unavesmensaje();
